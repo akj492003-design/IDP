@@ -1,0 +1,71 @@
+﻿# ==========================================
+# IDP PROJECT - ROOT GITIGNORE
+# ==========================================
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# React / Node
+node_modules/
+dist/
+build/
+.vite/
+
+# ML / DL model cache
+**/model_cache/
+
+# Runtime files and generated documents
+backend/storage/
+storage/
+uploads/
+logs/
+*.log
+
+# Datasets
+datasets/
+dataset/
+data/raw/
+data/processed/
+
+# Backups
+/backups/
+
+# Local databases
+*.sqlite
+*.sqlite3
+
+# Temporary patch files
+/gridfs-review.patch
+
+# Operating system files
+Thumbs.db
+.DS_Store
+
+# IDE temporary files
+.idea/
+
+# Nested repair backups and temporary snapshots
+**/backups/
+*.backup
+*.backup_*
+*.before_*
+*.orig
+*.tmp
+

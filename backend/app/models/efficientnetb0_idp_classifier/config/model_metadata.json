@@ -1,0 +1,42 @@
+{
+    "model_name": "IDP EfficientNetB0",
+    "model_version": "1.0.0",
+    "project": "Intelligent Document Processing System",
+    "framework": "TensorFlow",
+    "tensorflow_version": "2.10.1",
+    "keras_version": "2.10.0",
+    "architecture": "EfficientNetB0",
+    "pretrained_source": "ImageNet",
+    "number_of_classes": 3,
+    "class_mapping": {
+        "0": "resume",
+        "1": "invoice",
+        "2": "form"
+    },
+    "input_shape": [
+        224,
+        224,
+        3
+    ],
+    "output_shape": [
+        3
+    ],
+    "total_parameters": 4053414,
+    "trainable_backbone": true,
+    "batch_normalization_frozen": true,
+    "training_records": 6387,
+    "training_epochs": 9,
+    "batch_size": 4,
+    "test_records": 1127,
+    "final_test_metrics": {
+        "Accuracy": 0.9210292812777284,
+        "Macro Precision": 0.9203332081766072,
+        "Macro Recall": 0.9207342010941332,
+        "Macro F1": 0.9203362281093908,
+        "Weighted F1": 0.9205499801233626
+    },
+    "final_test_accuracy": 0.9210292812777284,
+    "test_set_used_for_training": false,
+    "saved_model_format": "TensorFlow SavedModel",
+    "weights_file": "weights/efficientnetb0_final.weights.h5"
+}

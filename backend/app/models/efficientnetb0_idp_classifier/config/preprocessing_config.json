@@ -1,0 +1,21 @@
+{
+    "image_size": [
+        224,
+        224
+    ],
+    "source_image": "Stage 4 canonical grayscale PNG",
+    "input_channels": 1,
+    "model_channels": 3,
+    "conversion": "Grayscale to RGB",
+    "resize_method": "Bilinear",
+    "antialias": true,
+    "input_dtype": "float32",
+    "input_pixel_range": [
+        0,
+        255
+    ],
+    "external_rescaling": false,
+    "normalization": "EfficientNetB0 built-in preprocessing layers; do not apply MobileNetV2 preprocess_input",
+    "output_type": "Three raw classification logits",
+    "probability_conversion": "Softmax"
+}

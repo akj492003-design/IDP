@@ -1,0 +1,430 @@
+{
+  "schema_version": 3,
+  "project": "IDP System",
+  "source_notebook": "ml_dl(10).ipynb",
+  "classes": [
+    "form",
+    "invoice",
+    "resume"
+  ],
+  "evaluations": {
+    "development_oof": {
+      "title": "Stage 9 — Development Out-of-Fold Model Comparison",
+      "split": "Group-aware five-fold out-of-fold evaluation on the development dataset",
+      "metric_type": "development_oof",
+      "samples": 6387,
+      "folds": 5,
+      "test_set_used": false,
+      "note": "Stage 9 comparison; 6,387 development records. This is separate from the independent Stage 10 held-out test evaluation.",
+      "models": [
+        {
+          "model": "EfficientNetB0",
+          "family": "Deep Learning",
+          "accuracy": 0.90261469,
+          "precision": 0.90246291,
+          "recall": 0.90236112,
+          "f1_score": 0.90224562,
+          "weighted_f1_score": 0.90256834,
+          "selected_model": true,
+          "confusion_matrix": {
+            "labels": [
+              "resume",
+              "invoice",
+              "form"
+            ],
+            "rows": [
+              [
+                2072,
+                16,
+                66
+              ],
+              [
+                15,
+                1893,
+                197
+              ],
+              [
+                55,
+                273,
+                1800
+              ]
+            ],
+            "orientation": "rows=true labels; columns=predicted labels",
+            "sample_count": 6387,
+            "folds": 5,
+            "evaluation": "Stage 9 development OOF",
+            "source": "Saved group-aware five-fold OOF predictions"
+          }
+        },
+        {
+          "model": "MobileNetV2",
+          "family": "Deep Learning",
+          "accuracy": 0.89901362,
+          "precision": 0.89936044,
+          "recall": 0.89867872,
+          "f1_score": 0.89894857,
+          "weighted_f1_score": 0.89929599,
+          "confusion_matrix": {
+            "labels": [
+              "resume",
+              "invoice",
+              "form"
+            ],
+            "rows": [
+              [
+                2058,
+                23,
+                73
+              ],
+              [
+                18,
+                1831,
+                256
+              ],
+              [
+                46,
+                229,
+                1853
+              ]
+            ],
+            "orientation": "rows=true labels; columns=predicted labels",
+            "sample_count": 6387,
+            "folds": 5,
+            "evaluation": "Stage 9 development OOF",
+            "source": "Saved group-aware five-fold OOF predictions"
+          }
+        },
+        {
+          "model": "ResNet18",
+          "family": "Deep Learning",
+          "accuracy": 0.86503836,
+          "precision": 0.8645,
+          "recall": 0.8646,
+          "f1_score": 0.8645,
+          "weighted_f1_score": 0.8649,
+          "confusion_matrix": {
+            "labels": [
+              "resume",
+              "invoice",
+              "form"
+            ],
+            "rows": [
+              [
+                2043,
+                11,
+                100
+              ],
+              [
+                29,
+                1756,
+                320
+              ],
+              [
+                102,
+                300,
+                1726
+              ]
+            ],
+            "orientation": "rows=true labels; columns=predicted labels",
+            "sample_count": 6387,
+            "folds": 5,
+            "evaluation": "Stage 9 development OOF",
+            "source": "Saved group-aware five-fold OOF predictions"
+          }
+        },
+        {
+          "model": "Linear SVM",
+          "family": "Traditional ML",
+          "accuracy": 0.815876,
+          "precision": 0.81516,
+          "recall": 0.81537,
+          "f1_score": 0.8152,
+          "weighted_f1_score": 0.81573,
+          "confusion_matrix": {
+            "labels": [
+              "resume",
+              "invoice",
+              "form"
+            ],
+            "rows": [
+              [
+                1970,
+                76,
+                108
+              ],
+              [
+                61,
+                1657,
+                387
+              ],
+              [
+                127,
+                417,
+                1584
+              ]
+            ],
+            "orientation": "rows=true labels; columns=predicted labels",
+            "sample_count": 6387,
+            "folds": 5,
+            "evaluation": "Stage 9 development OOF",
+            "source": "Saved group-aware five-fold OOF predictions"
+          }
+        },
+        {
+          "model": "Logistic Regression",
+          "family": "Traditional ML",
+          "accuracy": 0.81039612,
+          "precision": 0.81047,
+          "recall": 0.80989,
+          "f1_score": 0.81013,
+          "weighted_f1_score": 0.81069,
+          "confusion_matrix": {
+            "labels": [
+              "resume",
+              "invoice",
+              "form"
+            ],
+            "rows": [
+              [
+                1952,
+                89,
+                113
+              ],
+              [
+                59,
+                1637,
+                409
+              ],
+              [
+                114,
+                427,
+                1587
+              ]
+            ],
+            "orientation": "rows=true labels; columns=predicted labels",
+            "sample_count": 6387,
+            "folds": 5,
+            "evaluation": "Stage 9 development OOF",
+            "source": "Saved group-aware five-fold OOF predictions"
+          }
+        },
+        {
+          "model": "Gaussian NB",
+          "family": "Traditional ML",
+          "accuracy": 0.7277282,
+          "precision": 0.72702,
+          "recall": 0.72737,
+          "f1_score": 0.72706,
+          "weighted_f1_score": 0.72748,
+          "confusion_matrix": {
+            "labels": [
+              "resume",
+              "invoice",
+              "form"
+            ],
+            "rows": [
+              [
+                1767,
+                142,
+                245
+              ],
+              [
+                79,
+                1543,
+                483
+              ],
+              [
+                290,
+                500,
+                1338
+              ]
+            ],
+            "orientation": "rows=true labels; columns=predicted labels",
+            "sample_count": 6387,
+            "folds": 5,
+            "evaluation": "Stage 9 development OOF",
+            "source": "Saved group-aware five-fold OOF predictions"
+          }
+        },
+        {
+          "model": "KNN",
+          "family": "Traditional ML",
+          "accuracy": 0.69171755,
+          "precision": 0.72954,
+          "recall": 0.69002,
+          "f1_score": 0.68193,
+          "weighted_f1_score": 0.68238,
+          "confusion_matrix": {
+            "labels": [
+              "resume",
+              "invoice",
+              "form"
+            ],
+            "rows": [
+              [
+                2007,
+                17,
+                130
+              ],
+              [
+                605,
+                1037,
+                463
+              ],
+              [
+                613,
+                141,
+                1374
+              ]
+            ],
+            "orientation": "rows=true labels; columns=predicted labels",
+            "sample_count": 6387,
+            "folds": 5,
+            "evaluation": "Stage 9 development OOF",
+            "source": "Saved group-aware five-fold OOF predictions"
+          }
+        }
+      ]
+    },
+    "final_test": {
+      "title": "Stage 10 — Independent Held-Out Test Evaluation",
+      "split": "Independent held-out test set; one final evaluation pass",
+      "metric_type": "held_out_test",
+      "samples": 1127,
+      "correct_predictions": 1038,
+      "incorrect_predictions": 89,
+      "test_set_used_for_training": false,
+      "note": "Final EfficientNetB0 test metrics from Stage 10. This is an independent 1,127-record held-out test set, not the Stage 9 development OOF evaluation.",
+      "models": [
+        {
+          "model": "EfficientNetB0",
+          "family": "Deep Learning / TensorFlow SavedModel",
+          "accuracy": 0.9210292812777284,
+          "precision": 0.9203332081766072,
+          "recall": 0.9207342010941332,
+          "f1_score": 0.9203362281093908,
+          "weighted_f1_score": 0.9205499801233626,
+          "test_samples": 1127,
+          "correct_predictions": 1038,
+          "incorrect_predictions": 89,
+          "selected_model": true,
+          "evaluation_note": "Stage 10 independent held-out test evaluation. Test data was not used for training or model selection.",
+          "class_mapping": {
+            "resume": 0,
+            "invoice": 1,
+            "form": 2
+          },
+          "classification_report": {
+            "form": {
+              "precision": 0.9005524861878453,
+              "recall": 0.8693333333333333,
+              "f1_score": 0.8846675712347354,
+              "support": 375
+            },
+            "invoice": {
+              "precision": 0.9137466307277629,
+              "recall": 0.9112903225806451,
+              "f1_score": 0.9125168236877522,
+              "support": 372
+            },
+            "resume": {
+              "precision": 0.9467005076142132,
+              "recall": 0.9815789473684211,
+              "f1_score": 0.9638242894056849,
+              "support": 380
+            }
+          },
+          "confusion_matrix": {
+            "labels": [
+              "form",
+              "invoice",
+              "resume"
+            ],
+            "rows": [
+              [
+                326,
+                29,
+                20
+              ],
+              [
+                32,
+                339,
+                1
+              ],
+              [
+                4,
+                3,
+                373
+              ]
+            ],
+            "orientation": "rows=true labels; columns=predicted labels"
+          }
+        }
+      ]
+    }
+  },
+  "inference_benchmark": {
+    "status": "unavailable",
+    "records": [],
+    "models_required": 7,
+    "model_packages_available": [
+      "EfficientNetB0"
+    ],
+    "device": null,
+    "model_version": null,
+    "batch_size": null,
+    "warmup_runs": null,
+    "measurement_repetitions": null,
+    "method": null,
+    "timed_scope": "model forward pass only",
+    "excluded_timings": [
+      "OCR",
+      "image decoding",
+      "preprocessing",
+      "field extraction",
+      "database operations",
+      "end-to-end document processing"
+    ],
+    "message": "Benchmark data unavailable. The six other Stage 9 model inference packages were not supplied, so a same-input seven-model benchmark cannot be executed."
+  },
+  "deployed_model": "EfficientNetB0",
+  "deployed_model_contract": {
+    "source": "Stage 11 EfficientNetB0 SavedModel export",
+    "model_version": "1.0.0",
+    "framework": "TensorFlow",
+    "input": "Stage 4 canonical grayscale PNG",
+    "image_size": [
+      224,
+      224
+    ],
+    "channels": "grayscale converted to RGB",
+    "dtype": "float32",
+    "pixel_range": [
+      0,
+      255
+    ],
+    "external_rescaling": false,
+    "output": "three logits converted to softmax probabilities once",
+    "class_mapping": {
+      "0": "resume",
+      "1": "invoice",
+      "2": "form"
+    }
+  },
+  "dataset": {
+    "source": "ml_dl(10).ipynb",
+    "development_samples": 6387,
+    "test_samples": 1127,
+    "classes": [
+      "form",
+      "invoice",
+      "resume"
+    ],
+    "test_class_support": {
+      "form": 375,
+      "invoice": 372,
+      "resume": 380
+    },
+    "note": "Stage 9 development OOF and Stage 10 held-out test metrics are stored separately."
+  }
+}
